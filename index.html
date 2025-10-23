@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>神経衰弱ゲーム</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="state-initial">
+    <main class="app">
+      <header class="scoreboard" aria-live="polite">
+        <div class="player" id="player-1" data-player="1">
+          <h2 class="player-name">プレイヤー1</h2>
+          <p class="player-score" id="score-player-1">0</p>
+        </div>
+        <div class="turn-indicator" id="turn-indicator">プレイヤー1のターン</div>
+        <div class="player" id="player-2" data-player="2">
+          <h2 class="player-name">プレイヤー2</h2>
+          <p class="player-score" id="score-player-2">0</p>
+        </div>
+      </header>
+
+      <section class="status" aria-live="polite">
+        <p id="status-message">スタートボタンを押してゲームを開始してください。</p>
+      </section>
+
+      <section class="controls">
+        <button id="start-button" type="button">スタート</button>
+        <button id="restart-button" type="button">もう一度スタート</button>
+      </section>
+
+      <section class="grid-wrapper">
+        <div id="card-grid" class="card-grid" role="grid" aria-label="神経衰弱のカード">
+          <!-- Cards will be injected dynamically -->
+        </div>
+      </section>
+    </main>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>
